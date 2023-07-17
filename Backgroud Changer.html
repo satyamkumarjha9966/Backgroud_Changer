@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: 500px;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            border: solid #000000 2px;
+            border-radius: 50%;
+            cursor: pointer;
+            
+        }
+        #white{background-color: #ffffff;}
+        #black{background-color: #000000;}
+        #blue{background-color: #0000ff;}
+        #orange{background-color: #ffa500;}
+
+        #colorChanger{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorChanger">
+        <span class="btn" id="white" onclick="changebg('#ffffff')"></span>
+        <span class="btn" id="black" onclick="changebg('#000000')"></span>
+        <span class="btn" id="blue" onclick="changebg('#0000ff')"></span>
+        <span class="btn" id="orange" onclick="changebg('#ffa500')"></span>
+    </div>
+    <h1 class="text">Home</h1>
+    <img src="https://cdn.pixabay.com/photo/2023/05/30/10/10/wedding-8028145_640.jpg" alt="">
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio fuga facere cum, alias rem nesciunt, adipisci quidem fugiat asperiores amet? Maxime officia excepturi blanditiis quibusdam et eveniet labore, impedit consectetur at cum facilis aliquam deserunt dolorem voluptatem corporis provident debitis quia alias, deleniti exercitationem reiciendis? Fugit, minima dolore tempore molestiae nihil facilis quia rerum? Possimus odit nostrum perspiciatis enim ullam beatae necessitatibus nemo vitae doloremque illo ipsam rem laborum illum vero ducimus, aliquid dignissimos dolorem eaque maiores natus eveniet id sit facilis! Ea aperiam harum recusandae reiciendis facere. Harum ut neque pariatur fuga iusto reiciendis tempore voluptate dolorem fugit facilis enim explicabo ipsa voluptates dicta tempora mollitia assumenda architecto eveniet corporis accusamus porro inventore, perspiciatis natus iure. Sunt accusamus quia eaque vitae mollitia explicabo deleniti in exercitationem dolor! Beatae soluta fuga maxime molestias quis voluptatum ut perferendis illum ipsam, perspiciatis aperiam tempore aliquid quisquam molestiae pariatur fugit eos ducimus provident quo magnam quos? Veritatis debitis fugiat error molestias, atque ab eius quod, molestiae ea, pariatur omnis. Minima id, ratione nihil cumque a totam magni dolores, voluptate sunt ad adipisci natus explicabo cum quos quam praesentium sint velit. Eligendi consectetur quam vitae dicta numquam enim, perferendis asperiores, corporis placeat ullam aperiam blanditiis non sequi ab? Sunt aut quam facilis nulla voluptates voluptate, quia dicta quisquam est, reiciendis laudantium dolor dolore! Tempora maxime ratione ipsa cupiditate tenetur id porro consequatur quod neque sint earum quos voluptate esse provident voluptates nesciunt ullam, dolores possimus repellendus, velit cum dignissimos! Nemo, dicta itaque! Fuga neque aliquid sunt, provident consequuntur eum nobis, ipsam necessitatibus, iusto vitae ex! Facilis, necessitatibus, sapiente accusantium nihil magni quos unde sunt beatae explicabo architecto aperiam ab mollitia quo temporibus earum reprehenderit libero quidem facere eligendi consequuntur. Culpa, doloremque? Eaque excepturi maxime natus, eum fuga totam, culpa debitis nisi eius unde ut, alias aspernatur recusandae necessitatibus obcaecati iusto. Porro eius inventore fuga minima fugit perspiciatis ipsa aspernatur, exercitationem suscipit a! Quam dolorem maxime vero corrupti expedita praesentium ipsum sed aspernatur at earum vel neque, laudantium nulla quo eos. Perferendis consectetur ullam quas ex eligendi, sunt ad eaque quos voluptate inventore, at quo sapiente quia quasi ipsum omnis nesciunt nulla obcaecati cupiditate. Alias soluta aperiam, nam voluptatum numquam facilis vitae esse fugiat obcaecati, quidem exercitationem saepe, officia mollitia ab maiores ipsum pariatur quod enim quaerat optio rerum vel natus dolor. Eius temporibus consequatur esse sapiente laborum, possimus fugiat neque officia quidem est vel voluptatibus aliquam cum amet similique sequi expedita eaque voluptatem, autem molestias eum! Laboriosam, mollitia quaerat iure porro similique sunt, tenetur cupiditate, quas itaque doloribus dolores fuga? Ex fugit consequuntur eaque enim maxime voluptatibus exercitationem? Nihil ad quia officiis placeat ducimus, eaque unde, dolores dolorem laboriosam eveniet ipsa necessitatibus optio atque adipisci repellat! Impedit eius iste accusamus quo sequi facere tempora, eligendi illo deserunt soluta maxime velit blanditiis excepturi voluptatum ratione. Minus ratione nam, laboriosam, molestias libero vel provident accusantium eius architecto officia cum nostrum? Beatae odio eaque ut, deserunt veniam maiores sit officia, ad, eius commodi provident asperiores repudiandae.</p>
+
+    
+    <script>
+        function changebg(color) {
+            document.body.style.backgroundColor = color;
+            
+            let txt = document.getElementsByClassName('text')           
+            // isse ye array me collect ho jayega(sare class) isliye hume isme for loop lagana hoga
+
+            let btn = document.getElementsByClassName('btn')
+
+            if (color == '#000000' || color == '#0000ff') {
+                for (let ele of txt) { 
+                    ele.style.color = '#ffffff'
+                }
+            }else{
+                for (let ele of txt) {
+                    ele.style.color = '#000000'
+                }
+            }
+
+
+
+            if (color == '#000000' || color == '#0000ff') {
+                for (let ele of btn) { 
+                    ele.style.borderColor = '#ffffff'
+                }
+            }else{
+                for (let ele of btn) { 
+                    ele.style.borderColor = '#000000'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
